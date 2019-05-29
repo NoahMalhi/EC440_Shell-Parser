@@ -7,8 +7,22 @@ pipeline {
       }
     }
     stage('Deb Build Test') {
-      steps {
-        sh 'fpm -s dir -t deb -n shell /EC440_Shell-Parser'
+      parallel {
+        stage('Deb Build Test') {
+          steps {
+            sh '''mkdir       
+testFolder
+
+
+
+'''
+          }
+        }
+        stage('moveFiles') {
+          steps {
+            sh 'vi myshell.c'
+          }
+        }
       }
     }
   }
