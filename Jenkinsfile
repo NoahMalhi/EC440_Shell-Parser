@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Deb Build Test') {
       steps {
-        sh 'fpm -s dir -t deb -n shell '
+        sh 'fpm -s dir -t deb -n shell /EC440_Shell-Parser'
       }
     }
   }
